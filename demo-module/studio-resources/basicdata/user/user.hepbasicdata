@@ -1,0 +1,101 @@
+{
+  "basic_info" : {
+    "name" : "user",
+    "type" : "hepbasicdata",
+    "extend" : {
+      "hep.display.name" : "用户",
+      "table-name" : "user",
+      "table_columns" : [ {
+        "name" : "user_id",
+        "cname" : "用户编号",
+        "width" : 150,
+        "items" : { },
+        "multiSelect" : true
+      }, {
+        "name" : "user_name",
+        "cname" : "用户名",
+        "width" : 150,
+        "items" : { },
+        "multiSelect" : true
+      }, {
+        "name" : "user_gender",
+        "cname" : "用户性别",
+        "width" : 150,
+        "items" : {
+          "男" : "1",
+          "女" : "2",
+          "其他" : "3"
+        },
+        "multiSelect" : true
+      } ],
+      "table-url" : "/demo-module/studio-resources/table/user/user.heptabledesign"
+    }
+  },
+  "detail" : {
+    "status" : 3,
+    "name" : "user",
+    "chineseName" : "用户",
+    "description" : "",
+    "objectId" : "",
+    "group" : "",
+    "histories" : [ ],
+    "extensibleModel" : {
+      "status" : 1,
+      "data" : { },
+      "data2" : { }
+    },
+    "items" : [ {
+      "status" : 1,
+      "name" : "",
+      "chineseName" : "",
+      "description" : "",
+      "extensibleModel" : {
+        "status" : 1,
+        "data" : {
+          "user_id" : "lilei",
+          "user_name" : "李雷",
+          "user_gender" : "1"
+        },
+        "data2" : { }
+      },
+      "cate" : "",
+      "id" : "",
+      "enable" : true
+    }, {
+      "status" : 1,
+      "name" : "",
+      "chineseName" : "",
+      "description" : "",
+      "extensibleModel" : {
+        "status" : 1,
+        "data" : {
+          "user_id" : "hanmm",
+          "user_name" : "韩梅梅",
+          "user_gender" : "2"
+        },
+        "data2" : { }
+      },
+      "cate" : "",
+      "id" : "",
+      "enable" : true
+    }, {
+      "status" : 1,
+      "name" : "",
+      "chineseName" : "",
+      "description" : "",
+      "extensibleModel" : {
+        "status" : 1,
+        "data" : {
+          "user_id" : "liub",
+          "user_name" : "刘邦",
+          "user_gender" : "1"
+        },
+        "data2" : { }
+      },
+      "cate" : "",
+      "id" : "",
+      "enable" : true
+    } ],
+    "cates" : [ ]
+  }
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hundsun.jres.studio.demo.module.dao.UserDAO">
+	
+	<sql id="base_column_list">
+		user_id,user_name,user_account
+	</sql>
+	<select id="listUser" resultType="com.hundsun.jres.studio.demo.module.entity.UserDTO">
+		select user_id as userId,user_name as userName,user_account as userAccount from user
+	</select>
+ 	<select id="getUser" resultType="com.hundsun.jres.studio.demo.module.entity.UserDTO">
+ 		select user_id as userId,user_name as userName,user_account as userAccount
+		from user
+		where user_id = #{userId}
+ 	</select>
+ 	<update id="updateUser" parameterType="com.hundsun.jres.studio.demo.module.entity.UserDTO">
+ 		update user set user_id = #{userId},user_name = #{userName},user_account = #{userAccount} where user_id = #{userId}
+ 	</update>
+ 	<insert id="insertUser" parameterType="com.hundsun.jres.studio.demo.module.entity.UserDTO">
+ 		insert into user(user_id,user_name,user_account) values (#{userId},#{userName},#{userAccount})
+ 	</insert>
+ 	<delete id="deleteUser">
+ 		delete from user where user_id = #{userId}
+ 	</delete>
+</mapper>

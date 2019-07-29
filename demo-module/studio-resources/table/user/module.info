@@ -1,0 +1,16 @@
+{
+  "status" : 0,
+  "uuid" : "41b91284-397b-4372-9ac3-1f8c1ea1d166",
+  "name" : "user",
+  "chineseName" : "",
+  "description" : "",
+  "objectId" : "",
+  "group" : "",
+  "histories" : [ ],
+  "extensibleModel" : {
+    "status" : 0,
+    "uuid" : "b47e430f-f3cc-4cc1-aaf8-9889f85262b4",
+    "data" : { },
+    "data2" : { }
+  }
+}

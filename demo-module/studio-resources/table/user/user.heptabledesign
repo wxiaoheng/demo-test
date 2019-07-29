@@ -1,0 +1,207 @@
+{
+  "basic_info" : {
+    "name" : "user",
+    "type" : "heptabledesign",
+    "extend" : { }
+  },
+  "detail" : {
+    "status" : 3,
+    "name" : "user",
+    "chineseName" : "用户信息",
+    "description" : "用户",
+    "objectId" : "1001",
+    "group" : "",
+    "histories" : [ {
+      "status" : 1,
+      "modifiedDate" : "2019-07-25 10:49:14",
+      "version" : "",
+      "orderNumber" : "",
+      "modifiedBy" : "",
+      "charger" : "wangxh",
+      "modifiedReason" : "",
+      "modified" : "",
+      "comment" : "",
+      "extensibleModel" : {
+        "status" : 1,
+        "data" : { },
+        "data2" : { }
+      },
+      "modification" : {
+        "status" : 1,
+        "info" : {
+          "status" : 3,
+          "name" : "user",
+          "chineseName" : "用户信息",
+          "description" : "用户",
+          "objectId" : "1001",
+          "group" : "",
+          "histories" : [ ],
+          "extensibleModel" : {
+            "status" : 1,
+            "data" : { },
+            "data2" : { }
+          },
+          "columns" : [ {
+            "status" : 1,
+            "name" : "user_id",
+            "chineseName" : "用户编号",
+            "description" : "",
+            "extensibleModel" : {
+              "status" : 1,
+              "data" : { },
+              "data2" : { }
+            },
+            "mark" : "",
+            "dataType" : "HsChar32",
+            "defaultValue" : "",
+            "nullable" : false,
+            "comment" : ""
+          }, {
+            "status" : 1,
+            "name" : "user_account",
+            "chineseName" : "用户认证账号",
+            "description" : "",
+            "extensibleModel" : {
+              "status" : 1,
+              "data" : { },
+              "data2" : { }
+            },
+            "mark" : "",
+            "dataType" : "HsClientID",
+            "defaultValue" : "",
+            "nullable" : false,
+            "comment" : ""
+          }, {
+            "status" : 1,
+            "name" : "user_gender",
+            "chineseName" : "用户性别",
+            "description" : "1049:性别-1:男\r\n1049:性别-2:女\r\n1049:性别-3:其他",
+            "extensibleModel" : {
+              "status" : 1,
+              "data" : { },
+              "data2" : { }
+            },
+            "mark" : "",
+            "dataType" : "HsType",
+            "defaultValue" : "",
+            "nullable" : false,
+            "comment" : ""
+          } ],
+          "indexs" : [ {
+            "status" : 1,
+            "name" : "pk_user",
+            "unique" : false,
+            "cluster" : false,
+            "mark" : "",
+            "primary" : true,
+            "extensibleModel" : {
+              "status" : 1,
+              "data" : { },
+              "data2" : { }
+            },
+            "columns" : [ {
+              "status" : 1,
+              "name" : "user_id",
+              "chineseName" : "用户编号",
+              "description" : "",
+              "ascending" : true
+            } ]
+          } ],
+          "version" : "",
+          "update" : "",
+          "tableType" : "",
+          "cacheType" : "",
+          "partitionField" : "",
+          "clearCondition" : "",
+          "schema" : "hundsun",
+          "tableFlag" : "",
+          "partition" : false,
+          "history" : false
+        },
+        "modifyType" : "NEW_TABLE",
+        "type" : "新建表"
+      }
+    } ],
+    "extensibleModel" : {
+      "status" : 1,
+      "data" : { },
+      "data2" : { }
+    },
+    "columns" : [ {
+      "status" : 1,
+      "name" : "user_id",
+      "chineseName" : "用户编号",
+      "description" : "",
+      "extensibleModel" : {
+        "status" : 1,
+        "data" : { },
+        "data2" : { }
+      },
+      "mark" : "",
+      "dataType" : "HsChar32",
+      "defaultValue" : "",
+      "nullable" : false,
+      "comment" : ""
+    }, {
+      "status" : 1,
+      "name" : "user_name",
+      "chineseName" : "用户名",
+      "description" : "",
+      "extensibleModel" : {
+        "status" : 1,
+        "data" : { },
+        "data2" : { }
+      },
+      "mark" : "",
+      "dataType" : "HsName2",
+      "defaultValue" : "",
+      "nullable" : false,
+      "comment" : ""
+    }, {
+      "status" : 1,
+      "name" : "user_gender",
+      "chineseName" : "用户性别",
+      "description" : "1049:性别-1:男\r\n1049:性别-2:女\r\n1049:性别-3:其他",
+      "extensibleModel" : {
+        "status" : 1,
+        "data" : { },
+        "data2" : { }
+      },
+      "mark" : "",
+      "dataType" : "HsType",
+      "defaultValue" : "",
+      "nullable" : false,
+      "comment" : ""
+    } ],
+    "indexs" : [ {
+      "status" : 1,
+      "name" : "pk_user",
+      "unique" : false,
+      "cluster" : false,
+      "mark" : "",
+      "primary" : true,
+      "extensibleModel" : {
+        "status" : 1,
+        "data" : { },
+        "data2" : { }
+      },
+      "columns" : [ {
+        "status" : 1,
+        "name" : "user_id",
+        "chineseName" : "用户编号",
+        "description" : "",
+        "ascending" : true
+      } ]
+    } ],
+    "version" : "",
+    "update" : "",
+    "tableType" : "",
+    "cacheType" : "",
+    "partitionField" : "",
+    "clearCondition" : "",
+    "schema" : "hundsun",
+    "tableFlag" : "",
+    "partition" : false,
+    "history" : false
+  }
+}
