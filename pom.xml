@@ -1,26 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.hundsun.jres.studio</groupId>
-  <artifactId>demo-test</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <packaging>pom</packaging>
-  <modules>
-    <module>demo-pub</module>
-    <module>demo-module</module>
-    <module>test</module>
-  </modules>
-  <parent>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.hundsun.jres.studio</groupId>
+	<artifactId>demo-test</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<modules>
+		<module>demo-pub</module>
+		<module>demo-module</module>
+		<module>test</module>
+	</modules>
+	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.0.5.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
+		<maxInfoNum>10</maxInfoNum>
+		<maxWarnNum>10</maxWarnNum>
+		<hepLogPath></hepLogPath>
+
 	</properties>
 
 	<dependencies>
@@ -44,10 +49,10 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-	<dependency>
-		<groupId>org.springframework</groupId>
-		<artifactId>spring-web</artifactId>
-	</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -56,66 +61,45 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			
+
 			<!-- PMD插件 -->
- 	 <plugin>
-        <!-- groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-pmd-plugin</artifactId>
-        <version>3.8</version-->
-        <groupId>com.hundsun.jres.studio</groupId>
-        <artifactId>maven-hep-plugin</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
-        <configuration>
-        	<maxInfoNum>10</maxInfoNum>
-        	<maxWarnNum>10</maxWarnNum>
-        	<aggregate>true</aggregate>
-          <sourceEncoding>${project.build.sourceEncoding}</sourceEncoding>
-          <targetJdk>${java.version}</targetJdk>
-          <printFailingErrors>true</printFailingErrors>
-          <!-- 代码检查规则 -->
-          <rulesets>
-            <ruleset>rulesets/java/hs-pmd.xml</ruleset>
-          </rulesets>
-        </configuration>
-        <executions>
-          <execution>
-          	<id>hep-hep</id>
-            <phase>site</phase>
-            <goals>
-              <goal>hep</goal>
-            </goals>
-          </execution>
-        </executions>
-        <!-- 恒生规约扫描插件依赖 -->
-        <dependencies>
-          <dependency>
-            <groupId>com.hundsun.jres.studio</groupId>
-            <artifactId>hep-rule-java</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
-          </dependency>
-        </dependencies>
-      </plugin>
-      <!-- 编译插件 Spring-Boot 项目不需要设置，因为parent中已设置 -->
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <configuration>
-          <source>${java.version}</source>
-          <target>${java.version}</target>
-        </configuration>
-      </plugin>
-			
+			<plugin>
+				<!-- groupId>org.apache.maven.plugins</groupId> <artifactId>maven-pmd-plugin</artifactId> 
+					<version>3.8</version -->
+				<groupId>com.hundsun.jres.studio</groupId>
+				<artifactId>maven-hep-plugin</artifactId>
+				<version>1.0.0-SNAPSHOT</version>
+				<configuration>
+					<maxInfoNum>${maxInfoNum}</maxInfoNum>
+					<maxWarnNum>${maxWarnNum}</maxWarnNum>
+					<hepLogPath>${hepLogPath}</hepLogPath>
+					<aggregate>true</aggregate>
+					<sourceEncoding>${project.build.sourceEncoding}</sourceEncoding>
+					<targetJdk>${java.version}</targetJdk>
+					<printFailingErrors>true</printFailingErrors>
+					<!-- 代码检查规则 -->
+					<rulesets>
+						<ruleset>rulesets/java/hs-pmd.xml</ruleset>
+					</rulesets>
+				</configuration>
+				<executions>
+					<execution>
+						<id>hep-hep</id>
+						<phase>site</phase>
+						<goals>
+							<goal>hep</goal>
+						</goals>
+					</execution>
+				</executions>
+				<!-- 恒生规约扫描插件依赖 -->
+				<dependencies>
+					<dependency>
+						<groupId>com.hundsun.jres.studio</groupId>
+						<artifactId>hep-rule-java</artifactId>
+						<version>1.0.3</version>
+					</dependency>
+				</dependencies>
+			</plugin>
 		</plugins>
 	</build>
-	
-	<reporting>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-jxr-plugin</artifactId>
-        <version>2.3</version>
-      </plugin>
-    </plugins>
-  </reporting>
-	
 </project>
