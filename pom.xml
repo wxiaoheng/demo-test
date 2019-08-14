@@ -9,7 +9,7 @@
 	<modules>
 		<module>demo-pub</module>
 		<module>demo-module</module>
-		<module>test</module>
+		
 	</modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
