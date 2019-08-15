@@ -2,7 +2,8 @@ package com.hundsun.jres.studio.demo;
 
 /**
  * Hello world!
- *
+ * @author wangxh
+ * @date 
  */
 public class App 
 {
