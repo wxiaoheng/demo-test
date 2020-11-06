@@ -3,13 +3,13 @@ package com.hundsun.jres.studio.demo;
 /**
  * Hello world!
  * @author wangxh
- * @date 
+ * @since
  */
 public class App 
 {
-    public static void main( String[] args )
-    {
 
+    public static void main( String[] args ) {
+        //asd
         System.out.println( "Hello World!" );
     }
 }
