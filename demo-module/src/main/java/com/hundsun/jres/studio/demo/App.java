@@ -6,7 +6,6 @@ package com.hundsun.jres.studio.demo;
  * @since
  */
 public class App {
-
     public static void main( String[] args ) {
         //asd
         System.out.println( "Hello World!" );
